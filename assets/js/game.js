@@ -1,1 +1,20 @@
-window.alert("THIS IS AN ALERT! JAVASCRIPT IS RUNNING!");
+// Variables
+var playerName = window.prompt("What is your robot's name?");
+
+// What is this
+console.log(playerName)
+
+console.log("This logs a string, good for leaving yourself a message");
+// this will do math and log 20
+console.log(10 + 10);
+// what is this?
+console.log("Our robot's name is " + playerName);
+
+// fight function
+
+function fight() {
+    window.alert("The Fight has Begun!");
+    window-prompt("What is your robot's name?");
+};
+
+//fight ();
