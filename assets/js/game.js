@@ -11,19 +11,17 @@ console.log(playerName, playerAttack, playerHealth);
 var enemyNames = ["Roberto", "Amy Anderoid", "Robo Trumble"];
 var enemyHealth = 50;
 var enemyAttack = 12;
-console.log(enemyNames);
-console.log(enemyNames[0]); 
-console.log(enemyNames[1]);
-console.log(enemyNames[2]);
-console.log(enemyNames.length);
-for(var i = 0; i < enemyNames.length; i++) {
-    console.log(enemyNames[i]);
-    console.log(i);
-    console.log(enemyNames[i] + " is at " + i + " index.");
-  }  
+
+// console.log(enemyNames);
+// console.log(enemyNames[0]); 
+// console.log(enemyNames[1]);
+// console.log(enemyNames[2]);
+// console.log(enemyNames.length);
+
+
 
 // Welcome players to the game and alert them the round is starting
-var fight = function() {
+var fight = function(enemyName) {
     window.alert("Welcome to Robot Gladiators!");
 // Ask players if they would like to fight or run
  var promptFight = window.prompt("Would you like to FIGHT or SKIP this battle? Enter 'FIGHT' or 'SKIP' to choose.");
@@ -84,9 +82,11 @@ else {
 };
 // End of Fight Function
 // Run fight function to start game 
-
-// fight(); = ON PAUSE - COMMENTED OUT
-
+// For loop including fight function inside 
+for(var i = 0; i < enemyNames.length; i++) {
+    fight(enemyNames[i]);
+  }  
+// fight function satements 
 // Game States
 // "WIN" - Player robot has defeated all enemy-robots
 var enemy1 = "Roberto";
