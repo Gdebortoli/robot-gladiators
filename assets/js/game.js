@@ -144,26 +144,23 @@ var endGame = function () {
     }
 };
 // Shop Function
-
 var shop = function () {
     // ask player what they'd like to do
     var shopOptionPrompt = window.prompt(
-        "Would you like to REFILL your health, UPGRADE your attack, or LEAVE the store? Please enter one: 'REFILL', 'UPGRADE', or 'LEAVE' to make a choice."
+        "Would you like to REFILL your health, UPGRADE your attack, or LEAVE the store? Please enter 1 for REFILL, 2 for UPGRADE, or 3 for LEAVE."
     )
+    // To make it so we can use numbers as cases instead
+    shopOptionPrompt = parseInt(shopOptionPrompt);
     // use switch to carry our action
     switch (shopOptionPrompt) {
-        case "REFILL":
-        case "refill":
+        case 1:
             playerInfo.refillHealth();
             break;
-        case "UPGRADE":
-        case "upgrade":
+        case 2:
             playerInfo.upgradeAttack();
             break;
-        case "LEAVE":
-        case "leave":
+        case 3:
             window.alert("Leaving the store.");
-
             // do nothing, so function will end
             break;
         default:
@@ -172,7 +169,7 @@ var shop = function () {
             // call shop() again to force player to pick a valid option
             shop();
             break;
-    };
+    }
 };
 // Function to set name
 var getPlayerName = function () {
